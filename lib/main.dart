@@ -18,13 +18,25 @@ void main() {
 }
 
 class Artwork extends StatelessWidget {
+  const Artwork({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Museum'),
       ),
-      body: Image.asset('assets/images/Mona_Lisa.jpg'), //   <
+      body: Center(
+        child: Image.asset('assets/images/Mona_Lisa.jpg'),
+      ),
+      drawer: const Text(
+        'Mona Lisa',
+        style: TextStyle(
+            fontFamily: 'Merriweather',
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            color: Colors.brown),
+      ),
     );
   }
 }
